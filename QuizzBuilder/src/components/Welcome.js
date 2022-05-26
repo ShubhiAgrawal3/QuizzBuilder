@@ -10,7 +10,7 @@ function App() {
   const [crr_option, setCrr_option] = useState([])
 
   return ( 
-    <div className="App">
+    <div className="App"> 
       <Router>
         <Header />
         <Switch>

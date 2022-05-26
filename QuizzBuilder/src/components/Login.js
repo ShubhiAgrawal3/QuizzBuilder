@@ -12,7 +12,7 @@ function Login() {
   const [home , setHome] = useState(true);
 
   function handleLogin(e) {
-    e.preventDefault();
+    e.preventDefault(); 
     let mail = localStorage
       .getItem("Email")
       .replace(/"/g, "");
