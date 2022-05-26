@@ -33,16 +33,16 @@ function Login() {
   }
 
   return (
-    <div>
+    <div className='main'>
       {home ? (
-      <form onSubmit={handleLogin}>
+      <form onSubmit={handleLogin} className='form-style'>
 
-        <h1> User Login</h1>
+        <h2> User Login</h2>
 
         <div className='form-group p-2'>
                 <label>Email</label>
                 <input type="text"
-                className='form-control '
+                className='form-control p-2 mt-2'
                 placeholder='Enter your email'
                 onChange={(event) => setEmaillog(event.target.value)}
                 ></input>
@@ -50,13 +50,13 @@ function Login() {
             <div className='form-group p-2'>
                 <label>Password</label>
                 <input type="password"
-                className='form-control '
+                className='form-control p-2 mt-2'
                 placeholder='Enter your password'
                 onChange={(event) => setPasswordlog(event.target.value)}
                 ></input>
             </div>
 
-            <button type='submit' className='btn btn-dark btn-lg btn-block'>
+            <button type='submit' className='submit btn btn-lg text-light m-3'>
               Login
             </button>
 

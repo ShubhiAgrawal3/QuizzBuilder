@@ -5,7 +5,7 @@ const Mcq = ({ details, crr_option }) => {
   let res = [];
   let list = [];
   const [data, setData] = useState([])
-  const [percent, setPercent] = useState(0)
+  const [percent, setPercent] = useState(0) 
   const [answered, setAnswered] = useState(false)
   const resultBox = useRef('')
 
@@ -54,12 +54,15 @@ const Mcq = ({ details, crr_option }) => {
 
   return (
     <>
-      <h1>Your MCQ questions! (You can submit only once)</h1>
+      <h1 className="p-3 text-light mb-3">Choose the correct option</h1>
       {details.map((q) => {
         const { counter, question, option1, option2, option3, option4 } = q;
         return (
-          <div key={counter}>
-            <h2 className="question">{counter}. {question}</h2>
+          <div key={counter} className="container">
+            <div className="box">
+            <div className="ques">
+            <h3 className="question mt-2 p-2">{counter}. {question}</h3>
+            </div>
             <div className="q-cont">
               <div className="form-check radio-cont">
                 <input className="form-check-input" type="radio" name={counter} value={option1} onClick={(e) => handelClick(e, counter)} label={option1} id="op1" />
@@ -79,11 +82,12 @@ const Mcq = ({ details, crr_option }) => {
                 <label className="form-check-label" htmlFor={option4}>{option4}</label>
               </div>
             </div>
+            </div>
           </div>
         );
       })}
       <div className="btn-cont">
-        <button className="btn btn-submit" onClick={handelSubmit}>Submit</button>
+        <button className="btn btn-submit p-2 mt-3" onClick={handelSubmit}>Submit</button>
       </div>
       {answered &&
         <div ref={resultBox} className="result-box">

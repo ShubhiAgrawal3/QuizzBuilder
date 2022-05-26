@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
 * {
   padding: 0;
   margin: 0;
@@ -7,27 +9,68 @@
 body {
   background-color: rgb(250, 250, 250);
 }
+.main
+{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(174,83,83);
+  background: linear-gradient(20deg, rgba(174,83,83,1) 0%, rgba(99,44,142,1) 42%, rgba(43,116,174,1) 78%, rgba(0,224,255,1) 100%);
+}
+.form-style{
+  width: 40%;
+  background: rgb(237,214,254);
+  background: linear-gradient(45deg, rgba(237,214,254,1) 0%, rgba(254,250,222,1) 100%);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 3px 5px 5px 3px rgb(172, 171, 171);
+}
+h2{
+  text-align: center;
+  letter-spacing: 1.5px;
+  font-family:'Montserrat';
+  font-weight: 700;
+  color: rgb(137, 4, 4);
+}
+p{
+  float: right;
+}
+.submit{
+  border-radius: 25px;
+  border: none;
+  color: white;
+  background: linear-gradient(90deg, #000851 0%, #1CB5E0 100%);
+}
 
-.header {
-  height: 15vh;
-  background-color: rgb(155, 219, 247);
+.section{
+  width: 100%;
+  height: 12vh;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: start;
+  
+}
+
+.header {
+  
+  width: 1200px;
+  background-image: url('./components/quiz.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .header h1 {
+  /* width: 100%; */
   font-size: 3rem;
-  font-family: serif;
+  font-family: 'Montserrat';
   color: rgb(1, 14, 20);
-  text-shadow: 0px 3px 5px #acacac;
+  text-shadow: 0px 3px 5px #acacac; 
   align-items: center;
 }
 
-.header h1:hover {
-  font-size: 7.5rem;
-  transition: 0.2s ease-out;
-}
+
 
 .details-cont {
   width: 100%;
@@ -39,8 +82,9 @@ body {
 }
 
 .details {
-  background-color: #03574f;
-  color: white;
+  background: rgb(237,214,254);
+  background: linear-gradient(45deg, rgba(237,214,254,1) 0%, rgba(254,250,222,1) 100%);
+  color: rgb(108, 2, 2);
   border-radius: 12px;
   min-height: 47vh;
   padding: 1.2rem;
@@ -50,7 +94,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  box-shadow: 2px 2px 4px #2b00d0;
+  box-shadow: 3px 5px 5px 3px rgb(172, 171, 171);
 }
 
 input {
@@ -75,25 +119,7 @@ label {
   justify-content: space-around;
 }
 
-.d-left {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  padding: 37px;
-  height: 59vh;
-  width: 30%;
-  margin: 9px;
-  background-color: #0000b8;
-  box-shadow: 2px 2px 9px grey;
-  font-size: 4rem;
-}
-.d-left:hover {
-  background-color: black;
-  color: white;
-  transition: 0.3s ease-out;
-  transform: scale(1.0122);
-}
+
 
 .toggle_cont {
   display: flex;
@@ -112,50 +138,53 @@ label {
   height: 40px;
   padding: 9px;
   margin: 0px 6px;
+  /* border-radius: 25px; */
+  color: white;
+}
+.btn-add:hover{
+  transform: scale(1.5px);
+  border-radius: 25px;
 }
 
-.btn-add {
-  background-color: rgb(211, 58, 96);
-  border-radius: 5px;
-}
-.btn-add:hover {
-  background-color: rgb(100, 15, 26);
-}
-.btn-create {
-  background-color: rgb(70, 255, 70);
-  border-radius: 5px;
-}
-.btn-create:hover {
-  background-color: rgb(16, 109, 16);
-}
 
 .Link {
   text-decoration: none;
-  color: black;
+  
 }
 
 .mcq-cont {
   margin: 0 34px;
 }
 
-.question{
-  margin-left: 200px;
-  margin-top: 9px;
-  /* text-align: center; */
+.container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-
-.q-cont {
-  margin-left: 57px;
+.box{
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgb(237,214,254);
+  background: linear-gradient(45deg, rgba(237,214,254,1) 0%, rgba(254,250,222,1) 100%);
+  color: rgb(108, 2, 2);
 }
-
-.radio-cont {
-  font-size: 13px;
+.form-check-input{
+  font-size: 20px;
 }
 
 .radio-cont input {
-  display: inline-block;
-  position: relative;
-  top: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 10px;
 }
 
 .btn-cont{
@@ -165,9 +194,12 @@ label {
 }
 
 .btn-submit {
-  background-color: black;
-  color: white;
-  margin-top: 34px;
+  border-radius: 25px;
+  border: none;
+  margin-top: 10px;
+  color: rgb(108, 2, 2);
+  background: rgb(237,214,254);
+  background: linear-gradient(45deg, rgba(237,214,254,1) 0%, rgba(254,250,222,1) 100%);
 }
 
 .btn-submit:hover {
@@ -176,12 +208,13 @@ label {
 }
 
 .result-box{
-  background: #4337ff;
+  color: white;
+  background: linear-gradient(90deg, #000851 0%, #1CB5E0 100%);
   margin: 45px 0 0 52px;
   display: flex;
   padding: 20px;
   align-items: center;
-  color: white;
+  
   font-size: 20px;
   justify-content: center;
   flex-direction: column;
@@ -189,13 +222,13 @@ label {
 }
 
 .green{
-  color: rgb(95, 238, 95);
+  color: rgb(182, 250, 182);
 }
 .yellow{
-  color: yellow;
+  color: rgb(252, 252, 153);
 }
 .orange{
-  color: orange;
+  color: rgb(253, 181, 48);
 }
 .red{
   color: red;

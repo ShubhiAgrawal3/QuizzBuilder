@@ -64,14 +64,12 @@ const Details = ({ details, setDetails, crr_option, setCrr_option }) => {
                         </div>
                         <div className="toggle_cont">
                             <input className="correct_opt" required type="number" value={l1} onChange={(e) => setL1(e.target.value)} min="1" max="4" placeholder="correct option" />
-                            <button type="submit" className="btn btn-add">Add</button>
+                            <button type="submit" className="submit btn btn-add text-light">Add</button>
                         </div>
                     </form>
-                    <button className='btn btn-create'><Link className="Link" to="/mcq">Create</Link></button>
+                    <button className='submit btn btn-add text-light'><Link className="Link text-light" to="/mcq">Create</Link></button>
                 </div>
-                <div className="d-left">
-                    Make your MCQ QUESTIONS on a GO!
-                </div>
+                
             </div>
         </>
     )
