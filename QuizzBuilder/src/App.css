@@ -253,12 +253,18 @@ label {
   .question{
     margin-left: 100px;
   }
+  .section1{
+    width: 850px;
+  }
 }
 
 @media screen and (max-width: 761px) {
   .details {
     margin: 0px;
     width: 90%;
+  }
+  .section1{
+    width: 700px;
   }
   .d-left {
     width: 80%;
@@ -272,6 +278,9 @@ label {
   .result-box{
     width: 100%;
   }
+  .section1{
+    width: 550px;
+  }
 }
 
 @media screen and (max-width: 585px) {
@@ -281,9 +290,15 @@ label {
   .input_cont input {
     width: 350px;
   }
+  .section1{
+    width: 550px;
+  }
 }
 
 @media screen and (max-width: 494px) {
+  .section1{
+    width: 480px;
+  }
   .header {
     justify-content: center;
   }

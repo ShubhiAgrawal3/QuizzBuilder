@@ -6,6 +6,7 @@ import Header from './components/Header'
 import Mcq from './components/Mcq'
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import Registration from './components/Registration';
+import Home from './components/Home';
 
 function App() {
   
@@ -13,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <Registration/>
-      
+     
     </div>
   );
 }
